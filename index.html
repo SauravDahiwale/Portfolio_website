@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurav - Web Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidebar-menu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-sharp fa-solid fa-xmark collapse" onclick="closemenu()" style="cursor: pointer;"></i>
+                </ul>
+                <i class="fa-sharp fa-solid fa-bars collapse" onclick="openmenu()" style="cursor: pointer;"></i>
+            </nav>
+            <div class="header-text">
+                <h1> Hi, I'm <span id="typewriting"></span> <br> from India</h1>
+            </div>
+        </div>
+    </div>
+
+    <!------------ about------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p> I am very enthusiastic and passionate College Student who loves technology and loves to learn new technologies. I have passion for developing Software and Web 
+                       interface applications. I am interested in working with the organization who works on ideas which will be helpful to solve 
+                    real world problems and eventually contribute to betterment of society. </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills',event)">Skills</p>
+                        <p class="tab-links" onclick="opentab('education',event)">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>DSA</span><br>Problem Solving Using Data Structures and Algorithm</li>
+                            <li><span>Web Development</span><br>Designing Web Inetrfaces using HTML,CSS and Javascript
+                            </li>
+                            <li><span>React JS</span><br>Designing Interactive user interfaces and web application</li>
+                            <li><span>Operating System</span><br>Knowledge of Operating System ,about Process
+                                and Memory Management for program </li>
+                            <li><span>DBMS</span><br>Knowledge of Data base Management System</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-present</span><br>Persuing B.tech from COEP Tech University </li>
+                            <li><span>2020</span><br>Passed 12th Maharashtra HSC Board with 89.08%</li>
+                            <li><span>2018</span><br>Passed 10th Maharashtra SSC Board with 95.80%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------- Portfolio ---------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>
+                            The app connects you to the talented people around the world.
+                        </p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>
+                            The app connects you to the talented people around the world.
+                        </p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>
+                            The app connects you to the talented people around the world.
+                        </p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- -------contact--------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>contact@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>0123456789</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn-2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your E-mail" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn-2" onclick="Submitfunction(event)">Submit </button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Thank You for Visiting <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+    <script>
+        let tabLinks = document.getElementsByClassName("tab-links");
+        let tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname, event) {
+            for (let tablink of tabLinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        let sidemenu = document.getElementById("sidebar-menu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+        const scriptURL = '<https://script.google.com/macros/s/AKfycbyI15njbsHKx3VLMSNvuJ4bAUVRhvava6IFNiU4NN6w7mYbKdv1Jd4850hWYe1HlZ4M-w/exec>'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = "";
+                    }, 3000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+
+
+        let letterIndex=0;
+        const dynamicContent=document.getElementById("typewriting");
+        const Name="Saurav Dahiwale" 
+
+        function printLetters() {
+
+            if (letterIndex == Name.length) {
+                clearLetters();
+            }
+            else if (letterIndex < Name.length) {
+                dynamicContent.textContent += Name.charAt(letterIndex);
+                letterIndex++;
+                setTimeout(function () {
+                    printLetters();
+                }, 200);
+            }
+        }
+        function clearLetters() {
+            if (letterIndex == -1) {
+                letterIndex = 0;
+                printLetters();
+            }
+            else if (letterIndex > -1) {
+                updatedphase = "";
+                for (let index = 0; index < letterIndex; index++) {
+                    updatedphase += Name.charAt(index);
+                }
+                letterIndex--;
+                dynamicContent.textContent = updatedphase;
+                setTimeout(clearLetters, 100);
+
+
+            }
+        }
+        
+        printLetters();
+    </script >
+       <!-- <script src="app.js"> </script> -->
+
+    </body>
+    </html>
